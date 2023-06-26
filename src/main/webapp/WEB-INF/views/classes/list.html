@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align: center">List Classes</h1>
+    <div class="row">
+        <div class="col-lg-3">
+            <a class="btn btn-primary" style="text-decoration: none; color: white" th:href="@{/create-class}">Create
+                new classes</a>
+        </div>
+        <div class="col-lg-3">
+            <a class="btn btn-primary" style="text-decoration: none; color: white" th:href="@{/students}">Student Home</a>
+        </div>
+        <div class="col-lg-3">
+            <a class="btn btn-primary" style="text-decoration: none; color: white" th:href="@{/sort-class}">Sort asc by number student</a>
+        </div>
+        <div class="col-lg-3">
+            <a class="btn btn-primary" style="text-decoration: none; color: white" th:href="@{/getAvg}">Display avg point</a>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th th:if="${avgPoint != null}">Avg</th>
+            <th>Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="c, count : ${classes}">
+            <tr>
+                <td th:text="${c.id}"></td>
+                <td th:text="${c.name}"></td>
+                <td th:text="${countStudent[count.index]}"></td>
+                <td th:if="${avgPoint != null}" th:text="${avgPoint[count.index]}"></td>
+                <td>
+                    <a class="btn btn-warning" th:href="@{/update-class/__${c.id}__ }">Update</a>
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
