@@ -1,7 +1,9 @@
 package com.example.student_jpa.service.classes;
 
 import com.example.student_jpa.model.Classes;
+import com.example.student_jpa.model.Student;
 import com.example.student_jpa.repository.IClassRepository;
+import com.example.student_jpa.repository.IStudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ public class ClassService implements IClassService {
 
     @Autowired
     private IClassRepository classRepository;
+    @Autowired
+    IStudentRepository studentRepository;
     @Override
     public Iterable<Classes> findAll() {
         return classRepository.findAll();
@@ -29,7 +33,14 @@ public class ClassService implements IClassService {
 
     @Override
     public void remove(Long id) {
-        classRepository.deleteById(id);
+        List<Student> students = studentRepository.findStudentByClasses_Id(id);
+        if (students.isEmpty()) {
+            classRepository.deleteById(id);
+        } else {
+            studentRepository.deleteAll(students);
+            classRepository.deleteById(id);
+        }
+
     }
 
     @Override

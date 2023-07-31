@@ -52,21 +52,10 @@ public class StudentService implements IStudentService {
         return studentRepository.findAllByOrderByAgeAsc();
     }
 
-
     @Override
-    public List<Student> findAllByClasses_Id(Long id) {
-        return studentRepository.findAllByClasses_Id(id);
+    public Page<Student> findAllByPage(Pageable pageable) {
+        return studentRepository.findAllByPage(pageable);
     }
 
-
-    @Override
-    public Page<Student> findAll(Pageable pageable) {
-        return studentRepository.findAll(pageable);
-    }
-
-    @Override
-    public Page<Student> findStudentByClasses_Id(Pageable pageable, Long id) {
-        return studentRepository.findStudentByClasses_Id(pageable, id);
-    }
 
 }

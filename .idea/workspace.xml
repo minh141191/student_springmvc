@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6766f200-84c8-4175-99bf-ee17735047ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/controller/StudentApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/controller/ClassesApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/controller/StudentApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/controller/StudentApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/repository/IClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/repository/IClassRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/classes/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/classes/ClassService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/student/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/student/IStudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/student/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_jpa/service/student/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,33 +71,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/module_04/student_jpa&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3e9067f331e8fbeaac34db29e42f91cc&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/module_04/student_jpa",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "spring.configuration.checksum": "3e9067f331e8fbeaac34db29e42f91cc",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.75" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.75" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/students" />
@@ -219,14 +223,29 @@
       <workItem from="1687715368275" duration="983000" />
       <workItem from="1687740509337" duration="8730000" />
       <workItem from="1687773580851" duration="1766000" />
-      <workItem from="1687784430867" duration="1171000" />
+      <workItem from="1687784430867" duration="4193000" />
+      <workItem from="1687827741237" duration="10490000" />
+      <workItem from="1687864723584" duration="146000" />
+      <workItem from="1687927805871" duration="4205000" />
+      <workItem from="1687956326057" duration="2758000" />
+      <workItem from="1687960995006" duration="717000" />
+      <workItem from="1688004979319" duration="8225000" />
+      <workItem from="1688046677047" duration="2909000" />
+      <workItem from="1688087537222" duration="9590000" />
+      <workItem from="1688130604928" duration="6973000" />
+      <workItem from="1688178953943" duration="289000" />
+      <workItem from="1688181162371" duration="8505000" />
+      <workItem from="1688305628936" duration="3352000" />
+      <workItem from="1688346102361" duration="2442000" />
+      <workItem from="1688372397470" duration="4674000" />
+      <workItem from="1689082316545" duration="3211000" />
+      <workItem from="1689650804414" duration="630000" />
+      <workItem from="1689666847817" duration="50000" />
+      <workItem from="1690169433431" duration="1683000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/student_jpa$Tomcat_9_0_75.ic" NAME="Tomcat 9.0.75 Coverage Results" MODIFIED="1687604110022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
